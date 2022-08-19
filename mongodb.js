@@ -3,7 +3,10 @@
 // const mognodb= require('mongodb')
 // const mongoClient= mognodb.MongoClient
 const {MongoClient,ObjectId} = require('mongodb')
-const  connectionURL= 'mongodb://127.0.0.1:27017'
+//const  connectionURL= 'mongodb://127.0.0.1:27017'
+const  connectionURL= 'mongodb+srv://ayansadhu:1qaz2wsx@cluster0.dxmnhxk.mongodb.net/?retryWrites=true&w=majority'
+
+
 const database= 'task-manager'
 
 MongoClient.connect(connectionURL, { useNewUrlParser: true}, (error, client)=>{
@@ -75,11 +78,11 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true}, (error, client)=>{
     //     console.log(error)
     //  })
 
-    db.collection('tasks').deleteOne({
-        description : 'Task4'
-    }).then((result)=>{
-        console.log(result)
-    }).catch((error)=>{
-        console.log(error)
-    })
+    // db.collection('tasks').deleteOne({
+    //     description : 'Task4'
+    // }).then((result)=>{
+    //     console.log(result)
+    // }).catch((error)=>{
+    //     console.log(error)
+    // })
 })
